@@ -1,0 +1,133 @@
+/* src/App.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.app-container {
+  background-image: url('https://img.freepik.com/free-vector/vector-abstract-background-design-wavy_2065-243.jpg?t=st=1718615719~exp=1718619319~hmac=51d87f893bfb1779b005a7f6b717451808f377a49f53e460c49e77e0808a9ad0&w=740');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust to make the container full height */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px; /* Space between header and buttons */
+}
+
+.logo {
+  width: 30px; /* Adjust the size as needed */
+  height: auto;
+}
+
+.welcome-message {
+  font-size: 24px;
+  color: black; /* Change the color to match your design */
+  margin-top: 10px;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #0056b3;
+}
+
+.admin-icon {
+  width: 30px;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .content {
+    max-width: 90%;
+    padding: 5px;
+  }
+
+  .welcome-message {
+    font-size: 18px;
+  }
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.forgot-password {
+  text-align: right;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
