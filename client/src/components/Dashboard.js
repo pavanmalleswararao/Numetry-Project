@@ -1,10 +1,12 @@
 // src/components/Dashboard.js
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Dashboard.css'; // Assuming you'll create a separate CSS file for dashboard styles
 
 const Dashboard = () => {
+  const [role, setRole] = useState('app-admin'); // state to handle the selected value
+
   return (
     <div className="dashboard-container">
       <header className="dashboard-header">
@@ -13,16 +15,72 @@ const Dashboard = () => {
           alt="Logo"
           className="dashboard-logo"
         />
-        <nav className="dashboard-nav">
+        <nav className="dashboard-sidebar">
           <ul>
             <li><Link to="/admin">Admin</Link></li>
-            <li><Link to="/employee">Employee</Link></li>
-            <li><Link to="/all-employees">All Employees</Link></li>
-            <li><Link to="/designation">Designation</Link></li>
-            <li><Link to="/employment-status">Employment Status</Link></li>
-            <li><Link to="/leave">Leave</Link></li>
-            <li><Link to="/attendance">Attendance</Link></li>
-            <li><Link to="/payroll">Payroll</Link></li>
+            <li>
+              <Link to="/employee">Employee</Link>
+              <div className="form-group">
+                <label htmlFor="employee-actions">Actions:</label>
+                <select
+                  id="employee-actions"
+                  className="input-field"
+                  value={role}
+                  onChange={(e) => setRole(e.target.value)}
+                >
+                  <option value="all-employees">All Employees</option>
+                  <option value="designation">Designation</option>
+                  <option value="employment-status">Employment Status</option>
+                </select>
+              </div>
+            </li>
+            <li>
+              <Link to="/leave">Leave</Link>
+              <div className="form-group">
+                <label htmlFor="leave-actions">Actions:</label>
+                <select
+                  id="leave-actions"
+                  className="input-field"
+                  value={role}
+                  onChange={(e) => setRole(e.target.value)}
+                >
+                  <option value="leave-status">Leave Status</option>
+                  <option value="leave-request">Leave Request</option>
+                </select>
+              </div>
+            </li>
+            <li>
+              <Link to="/attendance">Attendance</Link>
+              <div className="form-group">
+                <label htmlFor="attendance-actions">Actions:</label>
+                <select
+                  id="attendance-actions"
+                  className="input-field"
+                  value={role}
+                  onChange={(e) => setRole(e.target.value)}
+                >
+                  <option value="daily-log">Daily Log</option>
+                  <option value="attendance-request">Attendance Request</option>
+                  <option value="summary">Summary</option>
+                </select>
+              </div>
+            </li>
+            <li>
+              <Link to="/payroll">Payroll</Link>
+              <div className="form-group">
+                <label htmlFor="payroll-actions">Actions:</label>
+                <select
+                  id="payroll-actions"
+                  className="input-field"
+                  value={role}
+                  onChange={(e) => setRole(e.target.value)}
+                >
+                  <option value="salary-generation">Salary Generation</option>
+                  <option value="payrun">Payrun</option>
+                  <option value="pay-slips">Pay Slips</option>
+                </select>
+              </div>
+            </li>
             <li><Link to="/administrations">Administrations</Link></li>
             <li><Link to="/assets">Assets</Link></li>
             <li><Link to="/settings">Settings</Link></li>
@@ -32,7 +90,7 @@ const Dashboard = () => {
       <main className="dashboard-main">
         <h1>Dashboard</h1>
         <Link to="/job-desk">
-            <button className="job-desk-button">Job Desk</button>
+          <button className="job-desk-button">Job Desk</button>
         </Link>
       </main>
     </div>

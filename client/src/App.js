@@ -8,6 +8,7 @@ import ForgotPassword from './components/ForgotPassword';
 import ResetPassword from './components/ResetPassword';
 import Dashboard from './components/Dashboard';
 import JobDesk from './components/JobDesk';
+import ApplicationDashboard from './components/ApplicationDashboard';
 import './App.css'; // Import the CSS file
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
             <Route path="/reset-password" component={ResetPassword} />
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/job-desk" component={JobDesk} />
+            <Route path="/application-dashboard" component={ApplicationDashboard} />
             {/* Add more routes as needed */}
           </Switch>
         </div>

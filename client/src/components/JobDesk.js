@@ -1,9 +1,13 @@
-// src/components/JobDesk.js
-
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import './JobDesk.css'; // Import the CSS file
 
 const JobDesk = () => {
+  const history = useHistory();
+
+  const handleDashboardRedirect = () => {
+    history.push('/application-dashboard');
+  };
   return (
     <div className="job-desk">
       <div className="job-desk-header">
@@ -16,24 +20,32 @@ const JobDesk = () => {
       </div>
       
       <div className="job-desk-info">
-        <h2>Priya Pawar</h2>
-        <p>O Permanent</p>
-        <p>Director</p>
-        <p>Emp ID: AS23</p>
-        <p>App Admin</p>
-        <p>Department: Main Department</p>
-        <p>Salary: 80,000/-</p>
-        <p>Work Shift: Regular work shift</p>
+        <div className="profile-info">
+          <h2>Priya Pawar</h2>
+          <p>Permanent</p>
+          <p>Director</p>
+          <p>Emp ID: AS23</p>
+          <p>App Admin</p>
+        </div>
+        <div className="department-info">
+          <p>Department: Main Department</p>
+          <p>Salary: 80,000/-</p>
+          <p>Work Shift: Regular work shift</p>
+          <p>Joining Date: 05/5/2021</p>
+        </div>
       </div>
 
       <div className="job-desk-actions">
-        <button className="job-desk-button">Attendance Dashboard</button>
+        <button
+          className="job-desk-button"
+          onClick={handleDashboardRedirect}
+        >
+          Attendance Dashboard
+        </button>
       </div>
       
       <div className="job-desk-details">
         <ul>
-          <li>Joining date: 05/5/2021</li>
-          <li>April 2023</li>
           <li>Attendance</li>
           <li>Documents</li>
           <li>Bank details</li>
@@ -42,6 +54,7 @@ const JobDesk = () => {
           <li>Assets</li>
         </ul>
         <ul>
+          <li>April 2023</li>
           <li>Total Scheduled work hour</li>
           <li>Total work availability</li>
           <li>Regular: 15 days</li>

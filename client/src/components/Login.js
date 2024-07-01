@@ -41,7 +41,7 @@ const Login = ({ onLogin }) => {
         {error && <div className="error-message">{error}</div>}
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="login-as">Login as:</label>
+            <label htmlFor="login-as" style={{ color: 'black' }}>Login as:</label>
             <select
               id="login-as"
               className="input-field"
@@ -64,7 +64,7 @@ const Login = ({ onLogin }) => {
             </select>
           </div>
           <div className="form-group">
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email" style={{ color: 'black' }}>Email:</label>
             <input
               type="email"
               id="email"
@@ -74,7 +74,7 @@ const Login = ({ onLogin }) => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password" style={{ color: 'black' }}>Password:</label>
             <input
               type="password"
               id="password"
@@ -84,7 +84,7 @@ const Login = ({ onLogin }) => {
             />
           </div>
           <div className="form-group checkbox">
-            <label>
+            <label style={{ color: 'black' }}>
               <input type="checkbox" id="remember-me" style={{ marginLeft: 0 }} />
               Remember me
             </label>
