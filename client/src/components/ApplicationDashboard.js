@@ -1,9 +1,16 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom'; // Import useHistory
 import './ApplicationDashboard.css'; // Import the CSS file
 import barChartImage from './img/1.png'; // Update with the correct path to your image
 import pieChartImage from './img/2.png'; // Update with the correct path to your pie chart image
 
 const ApplicationDashboard = () => {
+  const history = useHistory(); // Initialize useHistory
+
+  const handleViewAsEmployee = () => {
+    history.push('/all-employees'); // Navigate to the AllEmployees route
+  };
+
   return (
     <div className="dashboard-container">
       <div className="dashboard-header">
@@ -26,7 +33,7 @@ const ApplicationDashboard = () => {
       <div className="dashboard-actions">
         <button className="dashboard-button">Punch in/Punch Out</button>
         <button className="dashboard-button">Take Break</button>
-        <button className="dashboard-button">View As Employee</button>
+        <button className="dashboard-button" onClick={handleViewAsEmployee}>View As Employee</button>
       </div>
 
       <div className="dashboard-stats">

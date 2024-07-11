@@ -9,6 +9,10 @@ import ResetPassword from './components/ResetPassword';
 import Dashboard from './components/Dashboard';
 import JobDesk from './components/JobDesk';
 import ApplicationDashboard from './components/ApplicationDashboard';
+import AllEmployees from './components/AllEmployees';
+import EmploymentStatus from './components/EmploymentStatus';
+import Designation from './components/Designation';
+import Modal from './components/Modal';
 import './App.css'; // Import the CSS file
 
 function App() {
@@ -60,6 +64,10 @@ function App() {
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/job-desk" component={JobDesk} />
             <Route path="/application-dashboard" component={ApplicationDashboard} />
+            <Route path="/all-employees" component={AllEmployees} />
+            <Route path="/employment-status" component={EmploymentStatus} />
+            <Route path="/designation" component={Designation} />
+            <Route path="/model" component={Modal}/>
             {/* Add more routes as needed */}
           </Switch>
         </div>
